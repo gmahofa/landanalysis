@@ -1,0 +1,667 @@
+-------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\Mahofa\OneDrive - University of Cape Town\CurrentWork\WorldBank\code\..\code\descriptives.txt
+  log type:  text
+ opened on:   8 Dec 2018, 23:45:25
+
+. 
+. use "..\data\household", clear
+
+. merge m:1 interview__id using "..\data\asset_quartiles"
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                             0
+    matched                            29,307  (_merge==3)
+    -----------------------------------------
+
+. drop _merge
+
+. *Distribution of households by regions
+. d
+
+Contains data from ..\data\household.dta
+  obs:        29,307                          
+ vars:           310                          8 Dec 2018 18:30
+ size:    92,082,594                          
+-------------------------------------------------------------------------------------------------------------------
+              storage   display    value
+variable name   type    format     label      variable label
+-------------------------------------------------------------------------------------------------------------------
+interview__id   str32   %9s                   InterviewId
+hhroster__id    byte    %6.0f                 
+province        str8    %9s                   Province
+province_cd     str8    %9s                   Code of the province
+prov_code       long    %8.0g      prov_code
+                                              Code of the province
+district        str10   %9s                   Name of district
+district_cd     str10   %9s                   District code
+dist_code       long    %10.0g     dist_code
+                                              District code
+sector          str10   %9s                   Name of sector
+sector_cd       str11   %9s                   Sector code
+sect_code       long    %11.0g     sect_code
+                                              Sector code
+cell            str9    %9s                   Name of cell
+cell_cd         str13   %9s                   Cell code
+cell_code       long    %13.0g     cell_code
+                                              Cell code
+village         str10   %9s                   Name of village
+village_cd      str10   %9s                   Village code
+vill_code       long    %10.0g     vill_code
+                                              Village code
+name_head       str40   %9s                   Name of houehold head
+telephone       str19   %9s                   Telephone number
+telephone_con~m double  %6.2f      telephone_confirm
+                                              Head Phone number check
+telephone_cor~d str10   %9s                   Corrected Head Phone number
+gps_int__Lati~e double  %6.2f                 GPS coordinates of the interview place: Latitude
+gps_int__Long~e double  %6.2f                 GPS coordinates of the interview place: Longitude
+gps_int__Accu~y double  %6.2f                 GPS coordinates of the interview place: Accuracy
+gps_int__Alti~e double  %6.2f                 GPS coordinates of the interview place: Altitude
+gps_int__Time~p str19   %9s                   GPS coordinates of the interview place: Timestamp
+name            str41   %9s                   List of houseold members
+s1q2            double  %6.2f      s1q2       Sex
+phone_confirm   double  %6.2f      phone_confirm
+                                              Phone number check
+phone_corrected str10   %9s                   Corrected Phone Nnumber
+s1q3            double  %25.2f     s1q3       Relationship to head
+age             double  %6.2f                 How old is [NAME] in completed years?
+s1q4_corrected  double  %6.2f                 How old is [NAME] in completed years?
+s1q5            double  %32.2f     s1q5       What is the present marital status of [NAME]?
+s1q6            double  %6.2f      s1q6       Does [NAME]'s spouse live in this household?
+s1q7__0         str10   %9s                   
+s1q7__1         str10   %9s                   
+s1q7__2         str10   %9s                   
+s1q7__3         str10   %9s                   
+s1q7__4         str10   %9s                   
+s1q7__5         str10   %9s                   
+s1q7__6         str10   %9s                   
+s1q7__7         str10   %9s                   
+s1q7__8         str10   %9s                   
+s1q7__9         str10   %9s                   
+s1q7__10        str10   %9s                   
+s1q7__11        str10   %9s                   
+s1q7__12        str10   %9s                   
+s1q7__13        str10   %9s                   
+s1q7__14        str10   %9s                   
+s1q7__15        str10   %9s                   
+s1q7__16        str10   %9s                   
+s1q7__17        str10   %9s                   
+s1q7__18        str10   %9s                   
+s1q7__19        str10   %9s                   
+s1q7__20        str10   %9s                   
+s1q7__21        str10   %9s                   
+s1q7__22        str10   %9s                   
+s1q7__23        str10   %9s                   
+s1q7__24        str10   %9s                   
+s1q7__25        str10   %9s                   
+s1q7__26        str10   %9s                   
+s1q7__27        str10   %9s                   
+s1q7__28        str10   %9s                   
+s1q7__29        str10   %9s                   
+s1q7__30        str10   %9s                   
+s1q7__31        str10   %9s                   
+s1q7__32        str10   %9s                   
+s1q7__33        str10   %9s                   
+s1q7__34        str10   %9s                   
+s1q7__35        str10   %9s                   
+s1q7__36        str10   %9s                   
+s1q7__37        str10   %9s                   
+s1q7__38        str10   %9s                   
+s1q7__39        str10   %9s                   
+s1q7__40        str10   %9s                   
+s1q7__41        str10   %9s                   
+s1q7__42        str10   %9s                   
+s1q7__43        str10   %9s                   
+s1q7__44        str10   %9s                   
+s1q7__45        str10   %9s                   
+s1q7__46        str10   %9s                   
+s1q7__47        str10   %9s                   
+s1q7__48        str10   %9s                   
+s1q7__49        str10   %9s                   
+s1q7__50        str10   %9s                   
+s1q7__51        str10   %9s                   
+s1q7__52        str10   %9s                   
+s1q7__53        str10   %9s                   
+s1q7__54        str10   %9s                   
+s1q7__55        str10   %9s                   
+s1q7__56        str10   %9s                   
+s1q7__57        str10   %9s                   
+s1q7__58        str10   %9s                   
+s1q7__59        str10   %9s                   
+s1q8            double  %6.2f      s1q8       Does [NAME] have a civil marriage certificate/ visited the
+                                                commune/sector office
+s1q9__0         str1    %9s                   
+s1q9__1         str7    %9s                   
+s1q9__2         str7    %9s                   
+s1q9__3         str7    %9s                   
+s1q9__4         str7    %9s                   
+s1q9__5         str7    %9s                   
+s1q9__6         str7    %9s                   
+s1q9__7         str7    %9s                   
+s1q9__8         str7    %9s                   
+s1q9__9         str7    %9s                   
+s1q9__10        str7    %9s                   
+s1q9__11        str7    %9s                   
+s1q9__12        str7    %9s                   
+s1q9__13        str7    %9s                   
+s1q9__14        str7    %9s                   
+s1q9__15        str7    %9s                   
+s1q9__16        str7    %9s                   
+s1q9__17        str7    %9s                   
+s1q9__18        str7    %9s                   
+s1q9__19        str7    %9s                   
+s1q9__20        str7    %9s                   
+s1q9__21        str7    %9s                   
+s1q9__22        str7    %9s                   
+s1q9__23        str7    %9s                   
+s1q9__24        str7    %9s                   
+s1q9__25        str7    %9s                   
+s1q9__26        str7    %9s                   
+s1q9__27        str7    %9s                   
+s1q9__28        str7    %9s                   
+s1q9__29        str7    %9s                   
+s1q9__30        str7    %9s                   
+s1q9__31        str7    %9s                   
+s1q9__32        str7    %9s                   
+s1q9__33        str7    %9s                   
+s1q9__34        str7    %9s                   
+s1q9__35        str7    %9s                   
+s1q9__36        str7    %9s                   
+s1q9__37        str7    %9s                   
+s1q9__38        str7    %9s                   
+s1q9__39        str7    %9s                   
+s1q9__40        str7    %9s                   
+s1q9__41        str7    %9s                   
+s1q9__42        str7    %9s                   
+s1q9__43        str7    %9s                   
+s1q9__44        str7    %9s                   
+s1q9__45        str7    %9s                   
+s1q9__46        str7    %9s                   
+s1q9__47        str7    %9s                   
+s1q9__48        str7    %9s                   
+s1q9__49        str7    %9s                   
+s1q9__50        str7    %9s                   
+s1q9__51        str7    %9s                   
+s1q9__52        str7    %9s                   
+s1q9__53        str7    %9s                   
+s1q9__54        str7    %9s                   
+s1q9__55        str7    %9s                   
+s1q9__56        str7    %9s                   
+s1q9__57        str7    %9s                   
+s1q9__58        str7    %9s                   
+s1q9__59        str7    %9s                   
+s1q10           double  %42.2f     s1q10      What is the agreement between [NAME] and his or her spouse (if more
+                                                than one wif
+s1q11           double  %6.2f                 When did [NAME] get married with the his/her spouse (if more than one
+                                                wife ask a
+s1q12           double  %6.2f      s1q12      Has [NAME] ever attended school?
+s1q13           double  %32.2f     s1q13      Higest grade completed
+s1q14           double  %28.2f     s1q14      Can [NAME] read and write with understanding in Kinyarwanda?
+s1q15           double  %28.2f     s1q15      Can [NAME] read and write with understanding in English?
+s1q16           double  %28.2f     s1q16      Can [NAME] read and write with understanding in French?
+s1q17           double  %46.2f     s1q17      What is the primary occupation of [NAME]?
+s1q17_other     str57   %9s                   Please specify other
+s1q18           double  %46.2f     s1q18      What is the secondary occupation of [NAME]?
+s1q18other      str32   %9s                   15. Please specify other
+s1q19           double  %22.2f     s1q19      What is the religious denomination of [NAME]?
+s1q19other      str49   %9s                   Please specify other
+idcard_no       str81   %9s                   ID card number of name
+phone           str9    %9s                   Phone number from listing
+interview__key  str11   %9s                   Unique 8-digit long identifier of the interview
+hhsize          double  %6.2f                 Number of household members
+noparcels       double  %6.2f                 Number of registered parcels in the name of household members
+noparcels_1     float   %9.0g                 
+s3q1__0         str42   %9s                   Make a complete list of parcels that are not reported in section 2:0
+s3q1__1         str42   %9s                   Make a complete list of parcels that are not reported in section 2:1
+s3q1__2         str42   %9s                   Make a complete list of parcels that are not reported in section 2:2
+s3q1__3         str39   %9s                   Make a complete list of parcels that are not reported in section 2:3
+s3q1__4         str39   %9s                   Make a complete list of parcels that are not reported in section 2:4
+s3q1__5         str31   %9s                   Make a complete list of parcels that are not reported in section 2:5
+s3q1__6         str32   %9s                   Make a complete list of parcels that are not reported in section 2:6
+s3q1__7         str33   %9s                   Make a complete list of parcels that are not reported in section 2:7
+s3q1__8         str26   %9s                   Make a complete list of parcels that are not reported in section 2:8
+s3q1__9         str23   %9s                   Make a complete list of parcels that are not reported in section 2:9
+s4q1__0         str73   %9s                   List of owned parcels sold/given away since 2003, but not reported in
+                                                sec 2:0
+s4q1__1         str32   %9s                   List of owned parcels sold/given away since 2003, but not reported in
+                                                sec 2:1
+s4q1__2         str30   %9s                   List of owned parcels sold/given away since 2003, but not reported in
+                                                sec 2:2
+s4q1__3         str23   %9s                   List of owned parcels sold/given away since 2003, but not reported in
+                                                sec 2:3
+s4q1__4         str26   %9s                   List of owned parcels sold/given away since 2003, but not reported in
+                                                sec 2:4
+s4q1__5         str19   %9s                   List of owned parcels sold/given away since 2003, but not reported in
+                                                sec 2:5
+s4q1__6         str13   %9s                   List of owned parcels sold/given away since 2003, but not reported in
+                                                sec 2:6
+s4q1__7         str11   %9s                   List of owned parcels sold/given away since 2003, but not reported in
+                                                sec 2:7
+s4q1__8         str7    %9s                   List of owned parcels sold/given away since 2003, but not reported in
+                                                sec 2:8
+s4q1__9         str7    %9s                   List of owned parcels sold/given away since 2003, but not reported in
+                                                sec 2:9
+s5q1            double  %14.2f     s5q1       Need for wife consent to mortgage land
+s5q2            double  %90.2f     s5q2       Wife's and daughter's inheritance rights to land
+s5q3            double  %99.2f     s5q3       Daughter's inhership rights in case both parents were to die
+s5q4            double  %15.2f     s5q4       Joint titling under community of property merraige regime
+s5q5            double  %88.2f     s5q5       Husband purcahsing land, CPR and joint titling
+vill_leaders    double  %6.2f                 Knwoledge about where to register inheritance:Village leaders
+cell_leader     double  %6.2f                 Knwoledge about where to register inheritance:Cell leaders
+sec_leader      double  %6.2f                 Knwoledge about where to register inheritance:Sector leaders/sector
+                                                land manager
+dist_land       double  %6.2f                 Knwoledge about where to register inheritance:District/district land
+                                                officer
+nat_land        double  %6.2f                 Knwoledge about where to register inheritance:National land
+                                                center/RNRA (registr
+reg_fee         double  %6.2f                 Knowledge of transaction registration fee (amount in RWF)
+inheritance     double  %6.2f                 Type of documents required to reigster inheritance
+                                                transaction:Inheritance docum
+land_lease      double  %6.2f                 Type of documents required to reigster inheritance transaction:Land
+                                                lease/freeho
+reg_cert        double  %6.2f                 Type of documents required to reigster inheritance
+                                                transaction:Certificate of re
+cad_map         double  %6.2f                 Type of documents required to reigster inheritance
+                                                transaction:Cadastral map
+app_form        double  %6.2f                 Type of documents required to reigster inheritance
+                                                transaction:Application from
+identity        double  %6.2f                 Type of documents required to reigster inheritance transaction:ID
+villlead_sal    double  %6.2f                 Place to register sales transaction:Village leaders
+cell_sales      double  %6.2f                 Place to register sales transaction:Cell leaders
+land_sales      double  %6.2f                 Place to register sales transaction:Sector leaders/sector land
+                                                manager
+dislnd_sales    double  %6.2f                 Place to register sales transaction:District/district land officer
+nati_sales      double  %6.2f                 Place to register sales transaction:National land center/RNRA
+                                                (registrar of land
+regfee_sales    double  %6.2f                 Amount expected to pay to register the sales transaction in RWF
+agre_aut        double  %6.2f                 Required documents to register the sales transaction:Purchased
+                                                agreement approve
+lease_sales     double  %6.2f                 Required documents to register the sales transaction:Land
+                                                lease/freehold title
+regcert_sales   double  %6.2f                 Required documents to register the sales transaction:Certificate of
+                                                registration
+cadmap_sales    double  %6.2f                 Required documents to register the sales transaction:Cadastral map
+appform_sales   double  %6.2f                 Required documents to register the sales transaction:Application from
+id_sales        double  %6.2f                 Required documents to register the sales transaction:ID
+informa_sales   double  %6.2f                 Required documents to register the sales transaction:Informal
+                                                agreement (could b
+villder_use     double  %6.2f                 Where to go to initiate land use change:Village leaders
+celleader_use   double  %6.2f                 Where to go to initiate land use change:Cell leaders
+secland_use     double  %6.2f                 Where to go to initiate land use change:Sector leaders/sector land
+                                                manager
+distland_use    double  %6.2f                 Where to go to initiate land use change:District/district land
+                                                officer
+natnal_use      double  %6.2f                 Where to go to initiate land use change:National land center/RNRA
+                                                (registrar of
+landuse_fee     double  %6.2f                 Amount expected to pay to make land use change
+lndlease_use    double  %6.2f                 Requied documents to make land use change:Land lease/freehold title
+regcert_use     double  %6.2f                 Requied documents to make land use change:Certificate of registration
+cadmap_use      double  %6.2f                 Requied documents to make land use change:Cadastral map
+appform_lease   double  %6.2f                 Requied documents to make land use change:Application from
+id_use          double  %6.2f                 Requied documents to make land use change:ID
+s5respondent    str10   %9s                   Enumerator, Who in the Household responded to this section?
+s6respondent    str10   %9s                   Enumerator, Who in the Household responded to this section?
+ssSys_IRnd      double  %6.2f                 Random number in the range 0..1 associated with interview
+has__errors     byte    %6.0f                 Errors count in the interview
+interview__st~s str22   %9s                   Status of the interview
+female          double  %9.0g      female     RECODE of s1q2 (Sex)
+head            double  %9.0g                 RECODE of s1q3 (Relationship to head)
+married         double  %9.0g                 Married
+live_hhd        double  %9.0g                 The spouse live in the household
+legal_marr      double  %9.0g                 Legally married
+community       double  %9.0g                 Regime of community of property
+ltd_community   double  %9.0g                 Regime of ltd community of acquests
+separation      double  %9.0g                 Separation of property
+year            float   %9.0g                 Years in marriage
+school          double  %9.0g                 Has head attended school
+educ_lev        double  %14.0g     educ_lev   RECODE of s1q13 (Higest grade completed)
+primary         double  %9.0g                 Primary Education
+sec_vocational  double  %9.0g                 Secondary and vocational
+kinyarwanda     double  %9.0g                 Able to read kinyarwanda
+english         double  %9.0g                 Able to read and write english
+french          double  %9.0g                 Able to read and write French
+agric           double  %9.0g                 Works in agriculture
+non_agric       double  %9.0g                 Works in non-agric
+agric_sec       double  %9.0g                 Secondary occuption:Head works in agric
+nonagr_sec      double  %9.0g                 Secondary occuption:Head works in non-agric
+catholic        double  %9.0g                 Head is catholic
+protestant      double  %9.0g                 Head is protestant
+other           double  %9.0g                 Other religion:Head
+nofemale        float   %9.0g                 Number of female children below the age of 14
+nomale          float   %9.0g                 Number of male children below the age of 14
+adultmale       float   %9.0g                 Adult male aged between 15 and 60
+adultfemale     float   %9.0g                 Adult female aged between 15 and 60
+oldfemale       float   %9.0g                 Number of female members aged 60 and above
+oldmale         float   %9.0g                 Number of male members aged 60 and above
+parcel1         float   %9.0g                 
+parcel2         float   %9.0g                 
+parcel3         float   %9.0g                 
+parcel4         float   %9.0g                 
+parcel5         float   %9.0g                 
+parcel6         float   %9.0g                 
+parcel7         float   %9.0g                 
+parcel8         float   %9.0g                 
+parcel9         float   %9.0g                 
+parcel10        float   %9.0g                 
+newparcel       float   %9.0g                 Parcels in
+parcelout1      float   %9.0g                 
+parcelout2      float   %9.0g                 
+parcelout3      float   %9.0g                 
+parcelout4      float   %9.0g                 
+parcelout5      float   %9.0g                 
+parcelout6      float   %9.0g                 
+parcelout7      float   %9.0g                 
+parcelout8      float   %9.0g                 
+parcelout9      float   %9.0g                 
+parcelout10     float   %9.0g                 
+parcelout       float   %9.0g                 Parcels sold
+instwife_yes    double  %9.0g                 Husband can mortgage land without wife's consent
+instwife_no     double  %9.0g                 Husband canno mortgage land without wife's consent
+spouse          double  %9.0g                 Spouse will own all the land
+spouse_50       double  %9.0g                 The spouse owns a 50% share, and the other is shared equally
+equalshre       double  %9.0g                 The spouse and chdn own equal shares
+chdn            double  %9.0g                 The children own all the land
+son_inhe        double  %9.0g                 Son will inherit
+son1            double  %9.0g                 Son inherit but will take care of others
+daughter        double  %9.0g                 Daughter will inherit
+equaldiv        double  %9.0g                 Equally divided
+husband         double  %9.0g                 Only husband name on cert under CPR
+wifeonly        double  %9.0g                 Only wife name on cert under CPR
+both            double  %9.0g                 Both names on the certificate
+joseph          double  %9.0g                 Register under the name of husband
+joint           double  %9.0g                 Joint registration
+writ_consent    double  %9.0g                 Written consent
+asset_index     float   %9.0g                 Scores for component 1
+wealth_qurtile  byte    %8.0g                 4 quantiles of asset_index
+-------------------------------------------------------------------------------------------------------------------
+Sorted by:  
+     Note:  dataset has changed since last saved
+
+. foreach var of varlist prov_code dist_code sect_code cell_code vill_code {
+  2. tab `var' if head == 1
+  3. }
+
+Code of the |
+   province |      Freq.     Percent        Cum.
+------------+-----------------------------------
+    Eastern |        768       11.58       11.58
+   Northern |      1,775       26.76       38.34
+   Southern |      1,608       24.24       62.58
+    Western |      2,482       37.42      100.00
+------------+-----------------------------------
+      Total |      6,633      100.00
+
+   District |
+       code |      Freq.     Percent        Cum.
+------------+-----------------------------------
+   Bugesera |          3        0.05        0.05
+     Burera |         38        0.57        0.62
+    Gakenke |        892       13.45       14.07
+    Gatsibo |        279        4.21       18.27
+    Gicumbi |        254        3.83       22.10
+   Gisagara |        668       10.07       32.17
+       Huye |        215        3.24       35.41
+    Karongi |        626        9.44       44.85
+     Kirehe |        327        4.93       49.78
+    Muhanga |        285        4.30       54.08
+      Ngoma |        159        2.40       56.48
+  Nyamagabe |        104        1.57       58.04
+ Nyamasheke |        741       11.17       69.21
+     Nyanza |         47        0.71       69.92
+  Nyaruguru |        125        1.88       71.81
+    Ruhango |        164        2.47       74.28
+    Rulindo |        591        8.91       83.19
+     Rusizi |        929       14.01       97.20
+    Rutsiro |        186        2.80      100.00
+------------+-----------------------------------
+      Total |      6,633      100.00
+
+Sector code |      Freq.     Percent        Cum.
+------------+-----------------------------------
+     BUREGA |        117        1.76        1.76
+    BUSHOKI |         80        1.21        2.97
+     BUYOGA |         97        1.46        4.43
+  Bushekeri |         38        0.57        5.01
+   Bushenge |         42        0.63        5.64
+  Bwishyura |        185        2.79        8.43
+   Cyabingo |        145        2.19       10.61
+    Gakenke |         25        0.38       10.99
+   Gashenyi |         50        0.75       11.74
+   Gashonga |        109        1.64       13.39
+     Gatore |        159        2.40       15.78
+    Gikonko |         32        0.48       16.27
+    Gishubi |        123        1.85       18.12
+     Gitoki |        279        4.21       22.33
+     KISARO |        142        2.14       24.47
+   Kamubuga |        272        4.10       28.57
+   Kanjongo |        144        2.17       30.74
+      Kansi |         86        1.30       32.04
+    Karambo |         91        1.37       33.41
+    Karembo |         81        1.22       34.63
+   Kibirizi |        104        1.57       36.20
+    Kigembe |        154        2.32       38.52
+   Kinihira |         44        0.66       39.18
+     Kinoni |         38        0.57       39.76
+    Kirimbi |        156        2.35       42.11
+       Kivu |        125        1.88       43.99
+    Kiyumba |         28        0.42       44.41
+     Maraba |        215        3.24       47.66
+      Mbuye |         36        0.54       48.20
+     Mpanga |         92        1.39       49.59
+    Muganza |        128        1.93       51.52
+    Mugunga |        182        2.74       54.26
+    Muhanga |        191        2.88       57.14
+     Murama |         29        0.44       57.58
+  Mushikiri |         76        1.15       58.72
+  Mushubati |        186        2.80       61.53
+      Mwogo |          3        0.05       61.57
+     Nkanka |         52        0.78       62.35
+     Nkungu |        280        4.22       66.58
+     Ntyazo |         47        0.71       67.28
+Nyabitekeri |        118        1.78       69.06
+  Nyakabuye |        168        2.53       71.60
+ Nyakarenzo |        172        2.59       74.19
+  Nyamabuye |         66        1.00       75.18
+  Nyankenke |        107        1.61       76.80
+     RUKOZO |        155        2.34       79.13
+   Rugabano |        126        1.90       81.03
+    Ruhango |         84        1.27       82.30
+     Rukira |         49        0.74       83.04
+     Rusasa |        127        1.91       84.95
+    Rushaki |        147        2.22       87.17
+   Rwimbogo |        148        2.23       89.40
+       Save |        145        2.19       91.59
+     Shangi |        243        3.66       95.25
+     Twumba |        315        4.75      100.00
+------------+-----------------------------------
+      Total |      6,633      100.00
+
+    Cell code |      Freq.     Percent        Cum.
+--------------+-----------------------------------
+      Akaziba |         81        1.22        1.22
+     Bugarama |        104        1.57        2.79
+       Buliba |         49        0.74        3.53
+      Burunga |        185        2.79        6.32
+Butangampundu |        117        1.76        8.08
+       Butare |         97        1.46        9.54
+    Buvungira |         38        0.57       10.12
+        Bwimo |        155        2.34       12.45
+  Cyabusheshe |        154        2.32       14.77
+        Cyiri |         32        0.48       15.26
+       Gakuta |        315        4.75       20.01
+       Gatovu |        154        2.32       22.33
+      Gifumba |         66        1.00       23.32
+         Giko |         32        0.48       23.81
+       Gitega |        147        2.22       26.02
+     Kabagina |         28        0.42       26.44
+       Kabuga |        126        1.90       28.34
+       Kabuye |        144        2.17       30.51
+     Kagatamu |         42        0.63       31.15
+      Kamonyi |        127        1.91       33.06
+     Kamubuga |        121        1.82       34.89
+      Kangazi |         52        0.78       35.67
+     Kanyanza |         91        1.37       37.04
+   Karemereye |        109        1.64       38.69
+    Karengera |        156        2.35       41.04
+     Katarara |         47        0.71       41.75
+      Kayenzi |         48        0.72       42.47
+       Kidomo |        151        2.28       44.75
+     Kigarama |        142        2.14       46.89
+       Kigoya |        144        2.17       49.06
+     Kizibere |         36        0.54       49.60
+     Kiziguro |         73        1.10       50.70
+       Mataba |        207        3.12       53.82
+      Mpondwa |        125        1.88       55.71
+       Munazi |        145        2.19       57.89
+      Munyana |        182        2.74       60.64
+       Musamo |         84        1.27       61.90
+       Nganzo |        191        2.88       64.78
+       Nkumba |         38        0.57       65.36
+       Ntango |        118        1.78       67.13
+   Nyabintare |        168        2.53       69.67
+    Nyabitare |        123        1.85       71.52
+       Rubaya |         92        1.39       72.91
+      Ruganda |        148        2.23       75.14
+     Rugarama |         76        1.15       76.29
+     Rugerero |        125        1.88       78.17
+       Ruhina |         28        0.42       78.59
+       Rukina |         44        0.66       79.26
+       Rukore |        145        2.19       81.44
+      Rurenge |          3        0.05       81.49
+     Rusagara |         25        0.38       81.86
+    Rwabutazi |        159        2.40       84.26
+    Rwagihura |        107        1.61       85.87
+      Rwamiko |        128        1.93       87.80
+       Sakara |         29        0.44       88.24
+       Shanga |        176        2.65       90.89
+       Shangi |        243        3.66       94.56
+      Shyembe |         39        0.59       95.15
+         Sure |        186        2.80       97.95
+         Taba |         50        0.75       98.70
+      Umunini |         86        1.30      100.00
+--------------+-----------------------------------
+        Total |      6,633      100.00
+
+    Village |
+       code |      Freq.     Percent        Cum.
+------------+-----------------------------------
+    Agatare |        154        2.32        2.32
+  Akibiraro |        125        1.88        4.21
+    Bahemba |         52        0.78        4.99
+  Birengero |         76        1.15        6.14
+      Bugwe |        147        2.22        8.35
+    Busumba |         28        0.42        8.77
+  Cyarubayi |        182        2.74       11.52
+    Gacyamo |         28        0.42       11.94
+     Gakoko |        172        2.59       14.53
+   Gasebeya |         38        0.57       15.11
+     Gatiba |        155        2.34       17.44
+     Gatoki |          3        0.05       17.49
+    Gifumba |         66        1.00       18.48
+       Giko |         97        1.46       19.95
+    Impinga |        128        1.93       21.88
+     Jokoma |         84        1.27       23.14
+   Kabigohe |         73        1.10       24.24
+     Kabuga |         44        0.66       24.91
+  Kadurumba |        145        2.19       27.09
+  Kamajumba |        207        3.12       30.21
+   Kamugani |         86        1.30       31.51
+    Kankoni |        118        1.78       33.29
+  Kanshenge |        121        1.82       35.11
+   Kanyinya |        186        2.80       37.92
+   Kanzenze |         49        0.74       38.66
+    Karambi |        247        3.72       42.38
+  Karandura |        104        1.57       43.95
+     Katiro |         32        0.48       44.43
+     Kidomo |        127        1.91       46.34
+   Kigarama |         39        0.59       46.93
+     Kigote |        145        2.19       49.12
+     Kigugu |        144        2.17       51.29
+    Kintobo |        151        2.28       53.57
+   Kisigiro |        117        1.76       55.33
+     Kivomo |         32        0.48       55.81
+     Kivumu |         61        0.92       56.73
+  Kumukenke |        191        2.88       59.61
+    Kwiperu |         81        1.22       60.83
+     Mabuye |        168        2.53       63.36
+     Migina |        126        1.90       65.26
+   Misundwe |        125        1.88       67.15
+     Mutabo |         38        0.57       67.72
+     Mwendo |        107        1.61       69.34
+     Mwisha |         50        0.75       70.09
+    Ngoboka |        243        3.66       73.75
+ Nyabikenke |        185        2.79       76.54
+  Nyamagana |        144        2.17       78.71
+ Nyamirembe |         29        0.44       79.15
+  Nyantende |        176        2.65       81.80
+     Rebero |         47        0.71       82.51
+   Rugarama |        109        1.64       84.15
+    Ruhinga |        148        2.23       86.39
+  Ruhinga I |         42        0.63       87.02
+    Rukonji |         92        1.39       88.41
+   Runyinya |        142        2.14       90.55
+   Rushashi |        154        2.32       92.87
+     Rwanzu |         48        0.72       93.59
+  Ryarugaju |        123        1.85       95.45
+     Samuko |        159        2.40       97.84
+     Twumba |        143        2.16      100.00
+------------+-----------------------------------
+      Total |      6,633      100.00
+
+. 
+. qui outreg2 using "..\output\descript.xls" if head == 1, sum(log) ///
+> replace eqkeep(N mean sd) keep(female age hhsize married school ///
+> primary sec_vocational live_hhd nofemale nomale adultmale noparcels ///
+> adultfemale oldfemale oldmale community ltd_community separation ///
+> kinyarwanda english french agric non_agric agric_sec nonagr_sec catholic protestant other ///
+> instwife_yes instwife_no spouse spouse_50 equalshre chdn son_inhe son1 ///
+> daughter equaldiv husband wifeonly both joseph joint writ_consent vill_leaders ///
+> cell_leader sec_leader dist_land nat_land reg_fee inheritance land_lease ///
+> reg_cert cad_map app_form identity villlead_sal cell_sales land_sales ///
+> dislnd_sales nati_sales regfee_sales agre_aut lease_sales regcert_sales ///
+> cadmap_sales appform_sales id_sales informa_sales villder_use celleader_use ///
+> secland_use distland_use natnal_use landuse_fee lndlease_use regcert_use ///
+> cadmap_use appform_lease) 
+ : 
+. qui outreg2 using "..\output\descript.xls" if head == 1&wealth_qurtile == 1, sum(log) ///
+> append eqkeep(N mean sd) keep(female age hhsize married school ///
+> primary sec_vocational live_hhd nofemale nomale adultmale noparcels ///
+> adultfemale oldfemale oldmale community ltd_community separation ///
+> kinyarwanda english french agric non_agric agric_sec nonagr_sec catholic protestant other ///
+> instwife_yes instwife_no spouse spouse_50 equalshre chdn son_inhe son1 ///
+> daughter equaldiv husband wifeonly both joseph joint writ_consent vill_leaders ///
+> cell_leader sec_leader dist_land nat_land reg_fee inheritance land_lease ///
+> reg_cert cad_map app_form identity villlead_sal cell_sales land_sales ///
+> dislnd_sales nati_sales regfee_sales agre_aut lease_sales regcert_sales ///
+> cadmap_sales appform_sales id_sales informa_sales villder_use celleader_use ///
+> secland_use distland_use natnal_use landuse_fee lndlease_use regcert_use ///
+> cadmap_use appform_lease) 
+ : 
+. qui outreg2 using "..\output\descript.xls" if head == 1&wealth_qurtile == 2, sum(log) ///
+> append eqkeep(N mean sd) keep(female age hhsize married school ///
+> primary sec_vocational live_hhd nofemale nomale adultmale noparcels ///
+> adultfemale oldfemale oldmale community ltd_community separation ///
+> kinyarwanda english french agric non_agric agric_sec nonagr_sec catholic protestant other ///
+> instwife_yes instwife_no spouse spouse_50 equalshre chdn son_inhe son1 ///
+> daughter equaldiv husband wifeonly both joseph joint writ_consent vill_leaders ///
+> cell_leader sec_leader dist_land nat_land reg_fee inheritance land_lease ///
+> reg_cert cad_map app_form identity villlead_sal cell_sales land_sales ///
+> dislnd_sales nati_sales regfee_sales agre_aut lease_sales regcert_sales ///
+> cadmap_sales appform_sales id_sales informa_sales villder_use celleader_use ///
+> secland_use distland_use natnal_use landuse_fee lndlease_use regcert_use ///
+> cadmap_use appform_lease) 
+--Break--
+r(1);
+
+end of do-file
+--Break--
+r(1);
+
+end of do-file
+
+--Break--
+r(1);
+
+. exit, clear
